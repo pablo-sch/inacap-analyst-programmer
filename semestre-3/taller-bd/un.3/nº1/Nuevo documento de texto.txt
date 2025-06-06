@@ -1,0 +1,17 @@
+BEGIN
+IF :old.salary != :new.salary THEN
+INSERT INTO system.audit_employees
+VALUES (sys_context('userenv','os_user'), sysdate,
+sys_context('userenv','ip_address'),
+:new.employee_id ||
+' salary changed from '||:old.salary||
+' to '||:new.salary);
+END IF;
+END;
+
+BEGIN
+IF :old.min_salary < :new.min_salary THEN
+INSERT INTO system.audit_employees
+VALUES (sys_context('userenv','os_user'), sysdate,sys_context('userenv','ip_address'),:new.employee_id ||' salary changed from '||:old.min_salary ||' to '||:new.min_salary );
+END IF;
+END;

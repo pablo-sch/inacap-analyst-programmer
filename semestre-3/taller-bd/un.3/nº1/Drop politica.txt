@@ -1,0 +1,15 @@
+BEGIN
+  DBMS_FGA.drop_policy(
+    object_schema   => 'AUDIT_TEST',
+    object_name     => 'COUNTRY',
+    policy_name     => 'CHECK_ID');
+END;
+
+BEGIN
+  DBMS_FGA.drop_policy(
+    object_schema   => 'HR',
+    object_name     => 'EMPLOYEES',
+    policy_name     => 'audit_system');
+END;
+
+SELECT sql_text FROM dba_fga_audit_trail;

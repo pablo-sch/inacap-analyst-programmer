@@ -1,0 +1,231 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.ejb.EJB;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import modelo.Materias;
+import modelo.MateriasFacade;
+
+/**
+ *
+ * @author Cesar
+ */
+public class srvmaterias extends HttpServlet {
+  @EJB
+    private MateriasFacade materiasFacade;
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+         try {
+            response.setContentType("text/html;charset=UTF-8");
+            PrintWriter out = response.getWriter();
+            
+            //ArrayList<Calidad> calidad= new ArrayList<Calidad>();
+            //calidad = (ArrayList<Calidad>)(Object) calidadFacade.findAll().toArray();
+            int matcodigo = 0;
+            String matnombre = "";
+            String boton="";
+           
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet srvmaterias</title>");  
+            out.println("<link rel='stylesheet' href='css/bootstrap.min.css'>");
+            out.println("</head>");
+            out.println("<body>");
+
+            
+            if(!(request.getParameter("txtcodigo").equals("")))
+                 matcodigo=Integer.parseInt(request.getParameter("txtcodigo"));
+            if(!request.getParameter("txtnombre").equals(""))
+                 matnombre=request.getParameter("txtnombre");
+            boton=request.getParameter("btnenviar");
+            if (boton.equals("Agregar"))
+            { 
+                Materias mat= new Materias();
+                mat.setMatcodigo(matcodigo);
+                mat.setMatnombre(matnombre);
+                materiasFacade.create(mat);
+                //    Materias.Insertar(matcodigo, matnombre);
+                Mostrar(response);
+            }
+            if(boton.equals("Actualizar"))
+            {
+                Materias mat= new Materias();
+                mat.setMatcodigo(matcodigo);
+                mat.setMatnombre(matnombre);
+                materiasFacade.edit(mat);
+                Mostrar(response);
+            }
+            if(boton.equals("Eliminar"))
+            {
+                Materias mat= new Materias();
+                mat.setMatcodigo(matcodigo);
+                if(materiasFacade.find(mat.getMatcodigo())!=null)
+                {
+                    materiasFacade.remove(mat);
+                    Mostrar(response);
+                }
+                else
+                {
+                   Mostrar(response);
+                }
+                
+            }
+            if(boton.equals("Listado"))
+            {
+                try {
+                   
+                    Mostrar(response);
+                } catch (Exception ex) {
+                    Logger.getLogger(srvmaterias.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+            }
+            if(boton.equals("Filtrar"))
+            {
+               try {
+                   
+                    Buscar(matnombre,response);
+                } catch (Exception ex) {
+                    Logger.getLogger(srvmaterias.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            
+            }
+
+            
+            out.println("<script src='js/jquery-3.3.0.min.js' ></script>");
+            out.println("<script src='js/bootstrap.min.js' ></script>");
+            out.println("</body>");
+            out.println("</html>");
+
+         }catch(Exception ex)
+                 {
+         
+         }
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+    public void Buscar(String nombre,HttpServletResponse response) throws IOException
+    {
+      PrintWriter out = response.getWriter();
+        out.println("<div class='row'>");
+        out.println("<div class='col-md-2'></div>");
+        out.println("<div class='col-md-4'>");
+        out.println("<table class='table'>");
+        out.println("<tr><th scope='col'>Codigo</th><th scope='col'>Materia</th></tr>");
+                
+                try {
+                    
+                    //List materias = materiasFacade.findbyNombre(nombre);
+                    List materias = materiasFacade.findbyLike(nombre);
+                    for(int i = 0; i< materias.size (); i++)
+                    {              
+                        Materias mat =  (Materias)materias.get(i);
+                        out.println("<tr scope='row'>");
+                        out.println("<td>"+mat.getMatcodigo()+"</td>");
+                        out.println("<td>"+mat.getMatnombre()+"</td>");
+                        out.println("</tr>");
+                        //out.println(cal.getCalcodigo()+">"+cal.getCalnombre());
+                    } 
+                    
+                    out.println("</table>");
+                    out.println("</div>"); //Cerramos col-md-4
+                    out.println("</div>"); //Cerramos row
+                } catch (Exception ex) {
+                    Logger.getLogger(srvmaterias.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }
+    public void Mostrar(HttpServletResponse response) throws IOException
+    {
+          
+        PrintWriter out = response.getWriter();
+        int codigo=0;
+        String nombre;
+        out.println("<div class='row'>");
+        out.println("<div class='col-md-2'></div>");
+        out.println("<div class='col-md-4'>");
+        out.println("<table class='table'>");
+        out.println("<tr><th scope='col'>Codigo</th><th scope='col'>Materia</th></tr>");
+                
+                try {
+                    
+                    List materias = materiasFacade.findAll();              
+                    for(int i = 0; i< materias.size (); i++)
+                    {              
+                        Materias mat =  (Materias)materias.get(i);
+                        out.println("<tr scope='row'>");
+                        out.println("<td>"+mat.getMatcodigo()+"</td>");
+                        out.println("<td>"+mat.getMatnombre()+"</td>");
+                        out.println("</tr>");
+                        //out.println(cal.getCalcodigo()+">"+cal.getCalnombre());
+                    } 
+                    
+                    out.println("</table>");
+                    out.println("</div>"); //Cerramos col-md-4
+                    out.println("</div>"); //Cerramos row
+                } catch (Exception ex) {
+                    Logger.getLogger(srvmaterias.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }
+
+}

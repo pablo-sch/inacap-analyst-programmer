@@ -1,0 +1,8 @@
+CREATE OR REPLACE TRIGGER "SYSTEM"."PAIS_TRIGGER" AFTER
+DELETE ON "HR"."COUNTRIES" FOR EACH ROW BEGIN 
+IF :old.COUNTRY_ID = :new.COUNTRY_ID THEN 
+INSERT INTO system.audit_system 
+VALUES (sys_context('userenv','os_user'), sys_context('userenv','ip_address'),NULL,NULL,sysdate, 
+' delete '||:old.COUNTRY_NAME||' to '||:new.COUNTRY_NAME); 
+END IF; 
+END;

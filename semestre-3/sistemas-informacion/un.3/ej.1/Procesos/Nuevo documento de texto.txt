@@ -1,0 +1,19 @@
+1) Planificador genera Orden de despacho y lo Entrega al asistente de Bodega
+2) El asistente de Bodega revisa productos a cargar guiándose según gua de despacho
+3) El asistente de Bodega pistolea cargamento y cargan el camión
+4) Automáticamente por sistema los datos de producto a cargar llegan al facturador.
+5) El facturador genera facturas y baucher con rutas a realizar.
+6) El facturador entrega los documentos generados a conductor.
+7) El conductor revisa el baucher con rutas a realizar.
+8) El conductor sale de bodega para comenzar a repartir.
+9) El conductor ubica local del cliente, si no lo encuentra salta a paso 18.
+10) El conductor pregunta al asistente de bodega si recibirán la mercadería.
+11) El asistente de bodega se comunica con el encargado de bodega.
+12) El encargado de bodega decide si recibir o no mercancía y notifica al asistente de bodega
+13) El asistente de bodega se comunica con el conductor y le entrega decisión
+14) Si acepta entonces el conductor procede con la descarga de la mercadería de lo contrario, pasa al paso 18.
+15) El conductor entrega facturas al cliente.
+16) El cliente firma las facturas.
+16) El conductor se queda con una factura.
+17) El conductor verifica si ay otro cliente, si hay, pasa al paso 9.
+18) El conductor se va.

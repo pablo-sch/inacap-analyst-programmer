@@ -1,0 +1,9 @@
+se inicia el listener por defecto
+LSNRCTL> START
+
+se detiene el listener por defecto para dar cabida al listener que se creó aparte porque o si no 
+surge error ya que no puede haber dos listener funcionando al mismo tiempo
+LSNRCTL> STOP
+
+se inicia el listener se creó aparte
+LSNRCTL> START "NOMBRE_DEL_LISTENER"

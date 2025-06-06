@@ -1,0 +1,188 @@
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     04/07/2013 09:15:59                          */
+/*==============================================================*/
+
+
+drop table if exists CLIENTE;
+
+drop table if exists DEVOLUCION;
+
+drop table if exists DEVOLUCIONLIBROS;
+
+drop table if exists INVENTARIO;
+
+drop table if exists INVENTARIOLIBROS;
+
+drop table if exists LIBRO;
+
+drop table if exists MATERIAS;
+
+drop table if exists PRESTAMOS;
+
+drop table if exists PRESTAMOSLIBROS;
+
+drop table if exists PRIVILEGIOS;
+
+drop table if exists USUARIOS;
+
+/*==============================================================*/
+/* Table: CLIENTE                                               */
+/*==============================================================*/
+create table CLIENTE
+(
+   CLIRUT               numeric(8,0) not null,
+   CLINOMBRES           varchar(20),
+   CLIAPATERNO          varchar(20),
+   CLIAMATERNO          varchar(20),
+   CLIDIRECCION         varchar(60),
+   CLIFONO              numeric(8,0),
+   CLIEMAIL             varchar(50),
+   CLISEXO              char(1),
+   primary key (CLIRUT)
+);
+
+/*==============================================================*/
+/* Table: DEVOLUCION                                            */
+/*==============================================================*/
+create table DEVOLUCION
+(
+   DEVNUMERO            bigint not null,
+   CLIRUT               numeric(8,0) not null,
+   DEVFECHA             date,
+   DEVHORA              time,
+   primary key (DEVNUMERO)
+);
+
+/*==============================================================*/
+/* Table: DEVOLUCIONLIBROS                                      */
+/*==============================================================*/
+create table DEVOLUCIONLIBROS
+(
+   LIBCOPIA             int not null,
+   LIBCODIGO            bigint not null,
+   DEVNUMERO            bigint not null,
+   primary key (LIBCOPIA, LIBCODIGO, DEVNUMERO)
+);
+
+/*==============================================================*/
+/* Table: INVENTARIO                                            */
+/*==============================================================*/
+create table INVENTARIO
+(
+   INVNUMERO            bigint not null,
+   INVFECHA             date,
+   primary key (INVNUMERO)
+);
+
+/*==============================================================*/
+/* Table: INVENTARIOLIBROS                                      */
+/*==============================================================*/
+create table INVENTARIOLIBROS
+(
+   LIBCOPIA             int not null,
+   LIBCODIGO            bigint not null,
+   INVNUMERO            bigint not null,
+   primary key (LIBCOPIA, LIBCODIGO, INVNUMERO)
+);
+
+/*==============================================================*/
+/* Table: LIBRO                                                 */
+/*==============================================================*/
+create table LIBRO
+(
+   LIBCODIGO            bigint not null,
+   LIBTITULO            varchar(60),
+   LIBAUTOR             varchar(60),
+   LIBEDITORIAL         varchar(50),
+   LIBCOPIA             int not null,
+   MATCODIGO            int,
+   LIBCODBARRA          numeric(8,0),
+   LIBESTADO            char(1),
+   primary key (LIBCOPIA, LIBCODIGO)
+);
+
+/*==============================================================*/
+/* Table: MATERIAS                                              */
+/*==============================================================*/
+create table MATERIAS
+(
+   MATCODIGO            int not null,
+   MATNOMBRE            varchar(30),
+   primary key (MATCODIGO)
+);
+
+/*==============================================================*/
+/* Table: PRESTAMOS                                             */
+/*==============================================================*/
+create table PRESTAMOS
+(
+   PRESTNUMERO          bigint not null,
+   CLIRUT               numeric(8,0) not null,
+   PRESTFECHA           date,
+   PRESTHORA            time,
+   PRESTFECHADEVOLUCION date,
+   primary key (PRESTNUMERO)
+);
+
+/*==============================================================*/
+/* Table: PRESTAMOSLIBROS                                       */
+/*==============================================================*/
+create table PRESTAMOSLIBROS
+(
+   LIBCOPIA             int not null,
+   LIBCODIGO            bigint not null,
+   PRESTNUMERO          bigint not null,
+   primary key (LIBCOPIA, LIBCODIGO, PRESTNUMERO)
+);
+
+/*==============================================================*/
+/* Table: PRIVILEGIOS                                           */
+/*==============================================================*/
+create table PRIVILEGIOS
+(
+   PRICODIGO            tinyint not null,
+   PRINOMBRE            varchar(15),
+   primary key (PRICODIGO)
+);
+
+/*==============================================================*/
+/* Table: USUARIOS                                              */
+/*==============================================================*/
+create table USUARIOS
+(
+   USUNOMBRE            varchar(30) not null,
+   PRICODIGO            tinyint not null,
+   USUCONTRASENA        varchar(15),
+   primary key (USUNOMBRE)
+);
+
+alter table DEVOLUCION add constraint FK_CLIENTESDEVOLUCION foreign key (CLIRUT)
+      references CLIENTE (CLIRUT) on delete restrict on update restrict;
+
+alter table DEVOLUCIONLIBROS add constraint FK_DEVOLUCIONLIBROS foreign key (LIBCOPIA, LIBCODIGO)
+      references LIBRO (LIBCOPIA, LIBCODIGO) on delete restrict on update restrict;
+
+alter table DEVOLUCIONLIBROS add constraint FK_DEVOLUCIONLIBROS2 foreign key (DEVNUMERO)
+      references DEVOLUCION (DEVNUMERO) on delete restrict on update restrict;
+
+alter table INVENTARIOLIBROS add constraint FK_INVENTARIOLIBROS foreign key (LIBCOPIA, LIBCODIGO)
+      references LIBRO (LIBCOPIA, LIBCODIGO) on delete restrict on update restrict;
+
+alter table INVENTARIOLIBROS add constraint FK_INVENTARIOLIBROS2 foreign key (INVNUMERO)
+      references INVENTARIO (INVNUMERO) on delete restrict on update restrict;
+
+alter table LIBRO add constraint FK_MATERIASLIBRO foreign key (MATCODIGO)
+      references MATERIAS (MATCODIGO) on delete restrict on update restrict;
+
+alter table PRESTAMOS add constraint FK_PRESTAMOSCLIENTES foreign key (CLIRUT)
+      references CLIENTE (CLIRUT) on delete restrict on update restrict;
+
+alter table PRESTAMOSLIBROS add constraint FK_PRESTAMOSLIBROS foreign key (LIBCOPIA, LIBCODIGO)
+      references LIBRO (LIBCOPIA, LIBCODIGO) on delete restrict on update restrict;
+
+alter table PRESTAMOSLIBROS add constraint FK_PRESTAMOSLIBROS2 foreign key (PRESTNUMERO)
+      references PRESTAMOS (PRESTNUMERO) on delete restrict on update restrict;
+
+alter table USUARIOS add constraint FK_USUARIOSPRIVILEGIOS foreign key (PRICODIGO)
+      references PRIVILEGIOS (PRICODIGO) on delete restrict on update restrict;

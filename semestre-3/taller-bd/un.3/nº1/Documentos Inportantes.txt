@@ -1,0 +1,8 @@
+Video Power Dessigner: https://www.youtube.com/watch?v=UDeprPS4mYo
+Clave Windows server: D7RJ8-46NC4-PVDXT-JFTJW-4VWVR
+Inportante VM VirtualBox Oracle: Permitir Virtualización en la BIOS antes de crear una sesión en la maquina virtual de oracle
+Paginas:
+	NetBeans: http://www.ntu.edu.sg/home/ehchua/programming/howto/netbeans_howto.html
+	JDK: http://www.ntu.edu.sg/home/ehchua/programming/howto/JDK_HowTo.html
+	SoloTodo: http://www.ntu.edu.sg/home/ehchua/programming/howto/JDK_HowTo.html
+	Servicio Armado: https://servicio-tecnico.mercadolibre.cl/MLC-480984674-servicio-tenico-formateo-armado-limpieza-etc-_JM

@@ -1,0 +1,28 @@
+BEGIN;
+dbms_fga.add_policy (
+object_schema => 'HR',
+object_name => 'EMPLOYEES',
+policy_name => 'audit_emps_salary',
+audit_condition=> 'department_id=10',
+audit_column => 'SALARY,COMMISSION_PCT',
+handler_schema => 'secure',
+handler_module => 'AUDIT_SYSTEM',
+enable => TRUE,
+statement_types => 'SELECT,UPDATE');
+END;
+
+BEGIN
+dbms_fga.add_policy (
+object_schema => 'HR',
+object_name => 'EMPLOYEES',
+policy_name => 'audit_system',
+enable => TRUE,
+statement_types => 'SELECT,UPDATE');
+END;
+
+BEGIN
+  DBMS_FGA.drop_policy(
+    object_schema   => 'HR',
+    object_name     => 'EMPLOYEES',
+    policy_name     => 'audit_system');
+END;

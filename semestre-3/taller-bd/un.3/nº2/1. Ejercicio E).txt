@@ -1,0 +1,8 @@
+CREATE OR REPLACE TRIGGER "SYSTEM"."SALARY_TRIGGER" AFTER
+UPDATE OF "MIN_SALARY" ON "HR"."JOBS" FOR EACH ROW BEGIN 
+IF :old.min_salary < :new.min_salary THEN 
+INSERT INTO system.audit_system
+VALUES (sys_context('userenv','os_user'), sys_context('userenv','ip_address'),old.min_salary,new.min_salary,sysdate, 
+:new.employee_id ||'job min_salary changed from '||:old.min_salary||' to '||:new.min_salary); 
+END IF; 
+END;

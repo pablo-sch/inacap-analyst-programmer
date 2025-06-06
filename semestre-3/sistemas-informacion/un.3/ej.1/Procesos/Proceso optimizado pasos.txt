@@ -1,0 +1,26 @@
+1) Planificador genera orden de despacho y lo entrega al asistente de bodega.
+2) Asistente de bodega revisa productos a cargar guiándose según guía de despacho.
+3) Asistente de bodega pistolea los productos a cargar y carga el camión.
+4) Automáticamente por sistema los datos de producto a cargar llegan al facturador.
+5) El facturador genera facturas y baucher con rutas a realizar.
+6) El facturador entrega los documentos generados a conductor.
+7) El conductor revisa los clientes y rutas a través de aplicación móvil.
+8) El conductor sale de bodega para comenzar a repartir.
+9) El conductor ubica residencia del cliente, si lo encuentra salta a paso 18.
+10) verifica que recibirá la mercadería.
+11) El asistente de bodega verifica información del conductor y se comunica al encargado de bodega.
+12) El encargado de bodega comunica a asistente de bodega decisión de recibir o no mercadería.
+13) El asistente de bodega le confirma a conductor la decisión.
+14) Si la decisión es si entonces el conductor procede con la descarga de la mercadería de lo contrario, paso 18.
+15) El conductor entrega factura al cliente.
+16) El cliente firma la factura.
+17) El cliente una vez dentro de su aplicación móvil muestra su código QR a conductor.
+18) El conductor saca su aplicación y escanea código del cliente.
+19) El conductor confirma estado de entrega en su aplicación.
+20) El conductor verifica si ay otro cliente, si hay, paso 9.
+21) el conductor se va.
+
+
+
+
+
