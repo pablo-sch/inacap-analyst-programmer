@@ -1,0 +1,3 @@
+En Este Ejemplo: la empresa Ingresa al usuario si este no se encuentra registrado en el sistema, el mismo usuario
+no se registra.
+El estado de un usuario es: "Se encuentra en el Estacionamiento" y "No se encuentra en el Estacionamiento".
