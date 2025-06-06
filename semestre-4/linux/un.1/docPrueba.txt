@@ -1,0 +1,161 @@
+[pablo@pablo ~]$ date +"%d-%m-%Y %H:%M:%S"
+10-09-2019 19:18:44
+
+hostnameclt set-hostname "Pablo.Abaroa.cl"
+
+[pablo@pablo ~]$ cd /
+[pablo@pablo /]$ cd /etc
+[pablo@pablo etc]$ ls a* | head -5
+ls: no se puede abrir el directorio audisp: Permiso denegado
+ls: no se puede abrir el directorio audit: Permiso denegado
+adjtime
+aliases
+aliases.db
+anacrontab
+asound.conf
+
+[pablo@pablo ~]$ cd Escritorio
+[pablo@pablo Escritorio]$ mkdir PRINCIP
+[pablo@pablo Escritorio]$ cd PRINCIP
+[pablo@pablo PRINCIP]$ mkdir DOCS PROGRAM APUNTES
+[pablo@pablo PRINCIP]$ cd DOCS
+[pablo@pablo DOCS]$ mkdir WORD EXCEL
+[pablo@pablo DOCS]$ cat > Doc1.txt     'Ctr + D -> skip'
+[pablo@pablo DOCS]$ cat > Doc2.txt     'Ctr + D -> skip'
+[pablo@pablo DOCS]$ cd -
+[pablo@pablo PRINCIP]$ cd APUNTES
+[pablo@pablo APUNTES]$ mkdir SISTEMAS
+[pablo@pablo APUNTES]$ cd SISTEMAS/
+[pablo@pablo SISTEMAS]$ cat > Tema1.doc     'Ctr + D -> skip'
+[pablo@pablo SISTEMAS]$ cat > Tema2.doc     'Ctr + D -> skip'
+[pablo@pablo SISTEMAS]$ pwd
+/home/pablo/Escritorio/PRINCIP/APUNTES/SISTEMAS/
+[pablo@pablo SISTEMAS]$ cd ../../
+[pablo@pablo PRINCIP]$ cat > Fichero.txt
+[pablo@pablo PRINCIP]$ cat > Fichero2.txt
+
+[pablo@pablo ~]$ cp -r /home/pablo/Escritorio/PRINCIP /home/pablo/Documentos
+
+[pablo@pablo home]$ ps -A > pablo/Escritorio/Evaluacion/procesos.txt
+
+[pablo@pablo Procesos]$ ps -eo pid,cmd,%mem --sort=-%mem | head -11  > pablo/Escritorio/Evaluacion/ram.txt
+  PID CMD                         %MEM
+14244 /usr/bin/gnome-shell         6.3
+ 8953 /usr/lib64/firefox/firefox   5.5
+13627 /usr/bin/X :0 -background n  4.8
+ 9166 /usr/lib64/firefox/firefox   3.6
+ 9277 /usr/lib64/firefox/firefox   3.3
+ 9211 /usr/lib64/firefox/firefox   2.0
+14575 /usr/bin/gnome-software --g  1.2
+15862 /usr/bin/gedit --gapplicati  0.8
+15838 /usr/bin/nautilus --gapplic  0.6
+14507 nautilus-desktop --force     0.6
+
+[pablo@pablo Procesos]$ ps -eo pid,cmd,%cpu --sort=-%cpu | head -11  > pablo/Escritorio/Evaluacion/recursos.txt
+  PID CMD                         %CPU
+ 8953 /usr/lib64/firefox/firefox   1.9
+14244 /usr/bin/gnome-shell         1.4
+13627 /usr/bin/X :0 -background n  0.6
+ 9277 /usr/lib64/firefox/firefox   0.3
+14278 /usr/libexec/gnome-terminal  0.2
+14175 /usr/bin/VBoxClient --draga  0.1
+    1 /usr/lib/systemd/systemd --  0.0
+    2 [kthreadd]                   0.0
+    3 [ksoftirqd/0]                0.0
+    5 [kworker/0:0H]               0.0
+
+[pablo@pablo home]$ lspci > /home/pablo/Escritorio/Evaluacion/dispositivos.txt
+00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Natoma] (rev 02)
+00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II]
+00:01.1 IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+00:03.0 Ethernet controller: Intel Corporation 82540EM Gigabit Ethernet Controller (rev 02)
+00:04.0 System peripheral: InnoTek Systemberatung GmbH VirtualBox Guest Service
+00:05.0 Multimedia audio controller: Intel Corporation 82801AA AC'97 Audio Controller (rev 01)
+00:06.0 USB controller: Apple Inc. KeyLargo/Intrepid USB
+00:07.0 Bridge: Intel Corporation 82371AB/EB/MB PIIX4 ACPI (rev 08)
+00:0d.0 SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)
+
+[pablo@pablo home]$ find / -name "passwd" > /home/pablo/Escritorio/Evaluacion/passwd.txt
+
+[pablo@pablo home]$ cd /home/pablo/Escritorio/Evaluacion/
+[pablo@pablo Evaluacion]$ cat > Archivo1.txt
+[pablo@pablo Evaluacion]$ cat > Archivo2.txt
+[pablo@pablo Evaluacion]$ cat > Archivo3.txt
+
+	[pablo@pablo Evaluacion]$ chmod +r+w+x Archivo1.txt 
+
+	[pablo@pablo Evaluacion]$ ls -la
+	total 44
+	drwxrwxr-x. 2 pablo pablo   163 sep 10 23:58 .
+	drwxr-xr-x. 3 pablo pablo    24 sep 10 23:20 ..
+	-rw-rw-r--. 1 pablo pablo     0 sep 10 23:57 Archivo1.txt
+	-rw-rw-r--. 1 pablo pablo     0 sep 10 23:58 Archivo2.txt
+	-rw-rw-r--. 1 pablo pablo     1 sep 11 00:04 Archivo3.txt
+	-rw-rw-r--. 1 pablo pablo   784 sep 10 23:41 dispositivos.txt
+	-rw-rw-r--. 1 pablo pablo   163 sep 10 23:54 passwd.txt
+	-rw-rw-r--. 1 pablo pablo 22160 sep 10 23:24 procesos.txt
+	-rw-rw-r--. 1 pablo pablo   429 sep 10 23:34 ram.txt
+	-rw-rw-r--. 1 pablo pablo   429 sep 10 23:34 recursos.txt
+	[pablo@pablo Evaluacion]$ chmod +r+w+x Archivo1.txt 
+	[pablo@pablo Evaluacion]$ chmod g-r-w-x Archivo1.txt 
+	[pablo@pablo Evaluacion]$ chmod o-r-w-x Archivo1.txt 
+	[pablo@pablo Evaluacion]$ chmod u-w-x Archivo1.txt 
+	[pablo@pablo Evaluacion]$ ls -la
+	total 44
+	drwxrwxr-x. 2 pablo pablo   163 sep 10 23:58 .
+	drwxr-xr-x. 3 pablo pablo    24 sep 10 23:20 ..
+	-r--------. 1 pablo pablo     0 sep 10 23:57 Archivo1.txt
+	-rw-rw-r--. 1 pablo pablo     0 sep 10 23:58 Archivo2.txt
+	-rw-rw-r--. 1 pablo pablo     1 sep 11 00:04 Archivo3.txt
+	-rw-rw-r--. 1 pablo pablo   784 sep 10 23:41 dispositivos.txt
+	-rw-rw-r--. 1 pablo pablo   163 sep 10 23:54 passwd.txt
+	-rw-rw-r--. 1 pablo pablo 22160 sep 10 23:24 procesos.txt
+	-rw-rw-r--. 1 pablo pablo   429 sep 10 23:34 ram.txt
+	-rw-rw-r--. 1 pablo pablo   429 sep 10 23:34 recursos.txt
+
+	[pablo@pablo Evaluacion]$ chmod u-r-w-x Archivo3.txt 
+	[pablo@pablo Evaluacion]$ chmod o-r-w-x Archivo3.txt 
+	[pablo@pablo Evaluacion]$ chmod g-r-w-x Archivo3.txt 
+	[pablo@pablo Evaluacion]$ ls -la
+	total 44
+	drwxrwxr-x. 2 pablo pablo   163 sep 10 23:58 .
+	drwxr-xr-x. 3 pablo pablo    24 sep 10 23:20 ..
+	-r--------. 1 pablo pablo     0 sep 10 23:57 Archivo1.txt
+	-rw-rw-r--. 1 pablo pablo     0 sep 10 23:58 Archivo2.txt
+	----------. 1 pablo pablo     1 sep 11 00:04 Archivo3.txt
+	-rw-rw-r--. 1 pablo pablo   784 sep 10 23:41 dispositivos.txt
+	-rw-rw-r--. 1 pablo pablo   163 sep 10 23:54 passwd.txt
+	-rw-rw-r--. 1 pablo pablo 22160 sep 10 23:24 procesos.txt
+	-rw-rw-r--. 1 pablo pablo   429 sep 10 23:34 ram.txt
+	-rw-rw-r--. 1 pablo pablo   429 sep 10 23:34 recursos.txt
+
+[pablo@pablo Escritorio]$ chmod 777 Evaluacion/
+[pablo@pablo Escritorio]$ ls -l
+total 0
+drwxrwxrwx. 2 pablo pablo 163 sep 10 23:58 Evaluacion
+
+[pablo@pablo Escritorio]$ su
+Contraseña: 
+[root@pablo Escritorio]# useradd Urs1
+[root@pablo Escritorio]# passwd Urs1
+[root@pablo Evaluacion]# chown Urs1: Archivo1.txt
+[root@pablo Evaluacion]# su Urs1
+[Urs1@pablo Evaluacion]$ chmod 777 Archivo1.txt
+[Urs1@pablo Evaluacion]$ ls -l
+total 44
+-rwxrwxrwx. 1 Urs1  Urs1      0 sep 10 23:57 Archivo1.txt
+-rw-rw-r--. 1 pablo pablo     0 sep 10 23:58 Archivo2.txt
+----------. 1 pablo pablo     1 sep 11 00:04 Archivo3.txt
+-rw-rw-r--. 1 pablo pablo   784 sep 10 23:41 dispositivos.txt
+-rw-rw-r--. 1 pablo pablo   163 sep 10 23:54 passwd.txt
+-rw-rw-r--. 1 pablo pablo 22160 sep 10 23:24 procesos.txt
+-rw-rw-r--. 1 pablo pablo   429 sep 10 23:34 ram.txt
+-rw-rw-r--. 1 pablo pablo   429 sep 10 23:34 recursos.txt
+
+[pablo@pablo Evaluacion]$ cat /proc/cpuinfo > cpu.txt
+
+[pablo@pablo Evaluacion]$ su
+Contraseña: 
+[root@pablo Evaluacion]# dmidecode - t bios -q > Bios.txt
+

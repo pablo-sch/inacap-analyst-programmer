@@ -1,0 +1,31 @@
+•clear
+•date
+•hwclock
+•cal
+•bc
+•setterm 
+•shutdown
+•hostaname
+•who
+•lscpu
+•lspci
+•ps
+•pstree
+•ls
+•passwd
+•df
+•du
+•history
+•ls
+•cd
+•Paginadores more, less
+•cp
+•mv
+•mkdir
+•rmdir -rm
+•head, tail
+•file
+•touch
+•pwd
+•cat
+•cal

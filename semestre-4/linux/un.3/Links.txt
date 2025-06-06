@@ -1,0 +1,4 @@
+https://www.linuxtotal.com.mx/?cont=info_admon_006
+https://blog.carreralinux.com.ar/2016/11/repositorios-en-centos-yum/
+https://www.monografias.com/trabajos30/direccionamiento-ip/direccionamiento-ip.shtml
+https://www.solvetic.com/tutoriales/article/3618-cambiar-y-configurar-hostname-y-direccion-ip-estatica-centos/

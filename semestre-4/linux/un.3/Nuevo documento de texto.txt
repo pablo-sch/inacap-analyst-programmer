@@ -1,0 +1,1 @@
+asignar un nombre a una ip espesifica en el propio pc, como asignar una direccion DNS, 

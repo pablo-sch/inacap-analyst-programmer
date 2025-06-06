@@ -1,0 +1,17 @@
+HTML (HTLM comtiene DOM que es su raiz de etiquetas ejemplo:  <div> <span> <a>)(componentes ejemplo: row col btn)
+
+
+HTML events methods (javascript le entrega metodos y eventos a HTML para que la pagina interactue como aplicacion de escritoeio, o sea, la pagina web detecta cuando un usuario reliza acciones y esta responde realizando cambios a si mismo, por ejemplo:
+cliqueas un boton o texto y este desaparece (HTML por si solo (sin javascript) no puede hacer eso)
+
+JQuery (ningiun codigo que este dentro de la etiqueta <script> el servidor no lo leera)
+	todo codigo que comience con en signo $ pertece a JQuery
+	.ready funcionara cuando la pagina este totalmete cargada, enviada desde el 	servidor
+
+CSS
+
+JavaScript (lenguaje de programacion orientada para sitios web (especiealmente para usuarios (no es un codigo que se utiliza en un servidor si no para computadoras, pcs, celulares,etc)(es un lenguaje orientado a eventos (funciona orienteda a acciones ( no ara nada a menos que el usuario aga algo)
+
+Java (es un lenguaje orientado a objetos)
+
+AJAX (desde javascript (nivel ususario) puedes configurar el servidor (la pagina web alojada en el servidor)

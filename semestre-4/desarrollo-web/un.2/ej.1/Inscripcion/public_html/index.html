@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            $(document).ready(function(){
+                $('.row-cocina').hide();
+                $('.row-informatica').hide();
+                
+                $('#carrera').change(function(e){
+                    var carrera = $('#carrera').val();
+                    if(carrera == "INF"){
+                        $('#redes').prop('checked', false);
+                        $('#programacion').prop('checked', false);
+                        $('.row-cocina').hide();
+                        $('.row-informatica').show();
+                        $('.opciones-informatica').hide();
+                    }
+                    else if(carrera == "COC"){
+                        $('#pasteleria').prop('checked', false);
+                        $('#ensaladas').prop('checked', false);
+                        $('.row-cocina').show();
+                        $('.row-informatica').hide();
+                        $('.opciones-cocina').hide();
+                    }
+                    else{
+                        $('.row-cocina').hide();
+                        $('.row-informatica').hide();
+                    }
+                });
+                
+                $('.radInf').change(function(e){
+                    if($('#redes').is(':checked')){
+                        $('.programacion').hide();
+                        $('.redes').show();
+                    }
+                    if($('#programacion').is(':checked')){
+                        $('.redes').hide();
+                        $('.programacion').show();
+                    }
+                });
+                
+                $('.radCoc').change(function(e){
+                    if($('#pasteleria').is(':checked')){
+                        $('.ensaladas').hide();
+                        $('.pasteleria').show();
+                    }
+                    if($('#ensaladas').is(':checked')){
+                        $('.pasteleria').hide();
+                        $('.ensaladas').show();
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        Nombre:
+                    </div>
+                    <div class="col">
+                        <input id="nombre" type="text" class="form-control" name="nombre"/>
+                    </div>
+                    <div class="col">
+                        <span class="rojo" id="error-nombre"></span>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col">
+                        Apellido:
+                    </div>
+                    <div class="col">
+                        <input id="apellido" type="text" class="form-control" name="apellido"/>
+                    </div>
+                    <div class="col">
+                        <span class="rojo" id="error-apellido"></span>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col">
+                        Carrera:
+                    </div>
+                    <div class="col">
+                        <select name="carrera" id="carrera">
+                            <option value="">Escoja Carrera</option>
+                            <option value="INF">Informática</option>
+                            <option value="COC">Cocina</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <span class="rojo" id="error-carrera"></span>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col">
+                        Intereses
+                    </div>
+                </div>
+                <div class="row row-informatica">
+                    <div class="col">Redes</div>
+                    <div class="col">
+                        <input id="redes" type="radio" class="form-control radInf" name="intereses_inf"/>
+                    </div>
+                    <div class="col">Programación</div>
+                    <div class="col">
+                        <input id="programacion" type="radio" class="form-control radInf" name="intereses_inf"/>
+                    </div>
+                </div> 
+                <div class="row row-informatica opciones-informatica programacion">
+                    <div class="col">Lenguajes</div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">Java</div>
+                            <div class="col"><input type="checkbox" name="java" id='java'/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">PHP</div>
+                            <div class="col"><input type="checkbox" name="php" id='php'/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Javascript</div>
+                            <div class="col"><input type="checkbox" name="javascript" id='javascript'/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-informatica opciones-informatica redes">
+                    <div class="col">Transmisión</div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">Wifi</div>
+                            <div class="col"><input type="checkbox" name="wifi" id='wifi'/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Cableado</div>
+                            <div class="col"><input type="checkbox" name="cableado" id='cableado'/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cocina">
+                    <div class="col">Pastelería</div>
+                    <div class="col">
+                        <input id="pasteleria" type="radio" class="form-control radCoc" name="intereses_coc"/>
+                    </div>
+                    <div class="col">Ensaladas</div>
+                    <div class="col">
+                        <input id="ensaladas" type="radio" class="form-control radCoc" name="intereses_coc"/>
+                    </div>
+                </div> 
+                <div class="row row-cocina opciones-cocina pasteleria">
+                    <div class="col">Especialidad</div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">Chocolates</div>
+                            <div class="col"><input type="checkbox" name="chocolates" id='chocolates'/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Frutas</div>
+                            <div class="col"><input type="checkbox" name="frutas" id='frutas'/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cocina opciones-cocina ensaladas">
+                    <div class="col">Tipo Ensalada</div>
+                    <div class="col">
+                        <div class="row">
+                            <div class="col">Fría</div>
+                            <div class="col"><input type="checkbox" name="fria" id='fria'/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">Caliente</div>
+                            <div class="col"><input type="checkbox" name="caliente" id='caliente'/></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div id="boton" class="btn btn-info">Registrarse</div>
+                    </div>
+                </div>
+            </form>
+        </div>        
+    </body>
+</html>

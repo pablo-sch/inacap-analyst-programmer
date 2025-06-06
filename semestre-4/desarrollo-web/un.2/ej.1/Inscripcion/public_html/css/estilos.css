@@ -1,0 +1,8 @@
+.rojo{
+    color: red;
+}
+.error{
+    color: red;
+    background: lightpink;
+    border-color: red;
+}

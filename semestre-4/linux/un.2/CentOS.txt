@@ -1,0 +1,12 @@
+----------------------
+30 GB de disco
+
+/swap 2GB
+/boot 500 MB
+/ 5GB
+/home 12,5 GB
+----------------------
+
+se recomienda no usar "su" porque se puede eliminar discos virtualizados o particiones
+* fdisk
+* fdisk -l

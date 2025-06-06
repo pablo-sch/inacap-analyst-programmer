@@ -1,0 +1,17 @@
+El servidor maneja las sesiones
+Las sesiones es la interaccion o nexo entre el servidor y el cliente, pero no es independiente en alguno de los dos, 
+o sea depende de los dos (cliente y servidor)
+El servidor posee la plantilla sesion la cual se rellena por cada usuario que se crea,
+en definitiva el usuario solicita sesion y el servidor la crea
+El servidor no guarda los cambios, configuraciones, ajustes, que has hecho en la plantilla vacia que te entrega,
+si no el cliente el que los guarda, mediante cookies, la cual se aloja en la maquina del cliente, el servidor
+en la mayoria de los casos solo guarda tu sesion pero no tus configuraciones por tema de seguridad por parte del cliente
+y optimizacion de espacio por el servidor
+
+
+Sesion es un arreglo que viaja entre cliente y servidor (se crea en el servidor pero no funciona si no hay cliente o usuario que le utilice)
+
+Todo esto hablando en Php
+
+
+

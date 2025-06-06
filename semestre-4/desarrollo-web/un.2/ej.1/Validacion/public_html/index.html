@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilos.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            $(document).ready(function(){
+                $('#boton').click(function(e){
+                    var nombre = $('#nombre').val();
+                    var apellido = $('#apellido').val();
+                    var telefono = $('#telefono').val();
+                    var email = $('#email').val();
+                    
+                    var msgErrorNombre = '';
+                    var msgErrorApellido = '';
+                    var msgErrorTelefono = '';
+                    var msgErrorEmail = '';
+                    $('#nombre').removeClass("error");
+                    $('#apellido').removeClass("error");
+                    $('#telefono').removeClass("error");
+                    $('#email').removeClass("error");
+                    
+                    if(nombre == '' || nombre.length > 50){
+                        msgErrorNombre = 'El nombre es obligatorio y debe tener máximo 50 caracteres.';
+                        $('#nombre').addClass("error");
+                    }
+                    if(apellido == '' || apellido.length > 50){
+                        msgErrorApellido = 'El apellido es obligatorio y debe tener máximo 50 caracteres.';
+                        $('#apellido').addClass("error");
+                    }
+                    /*
+                    if(telefono.charAt(0) != '+' && telefono.charAt(1) != '5' && telefono.charAt(2) != '6' && telefono.charAt(3) != '9'){
+                        msgErrorTelefono = 'El teléfono debe comenzar con "+569".';
+                    }*/
+                    var trozoTelefono = telefono.substring(1,12);                   
+                    
+                    if(telefono.startsWith("+569") == false || trozoTelefono.indexOf(".") != -1 || isNaN(trozoTelefono) == true || telefono.length != 12){
+                        msgErrorTelefono = 'El teléfono debe comenzar con "+569" y luego tener 8 números.';
+                        $('#telefono').addClass("error");
+                    } 
+                    var secciones = email.split('@');
+                    if(secciones.length != 2){
+                        msgErrorEmail = 'El email debe contener sólo un "@".';
+                        $('#email').addClass("error");
+                    } 
+                    if(!email.endsWith('.com') && !email.endsWith('.cl') && !email.endsWith('.net') && !email.endsWith('.es') && !email.endsWith('.org')){
+                        msgErrorEmail = 'El email debe pertenecer a los dominios ".com", ".cl", ".net", ".es" o ".org".';
+                        $('#email').addClass("error");
+                    } 
+                    if(secciones.length >= 1){
+                        if(secciones[0] == "" || secciones[secciones.length-1] == ""){
+                            msgErrorEmail = 'El "@" no debe estar en la primera ni en la última posición.';
+                            $('#email').addClass("error");
+                        }
+                    }
+                    if(secciones.length == 2){
+                        var despuesDeArroba = secciones[1];
+                        var seccionesPunto = despuesDeArroba.split('.');
+                        if(seccionesPunto.length != 2){
+                            msgErrorEmail = 'Después del "@" sólo puede haber un ".".';
+                            $('#email').addClass("error");
+                        }
+                        var antesDePunto = seccionesPunto[0];
+                        if(antesDePunto == ""){
+                            msgErrorEmail = 'Después del arroba debe haber contenido antes del "."';
+                            $('#email').addClass("error");
+                        }
+                    }
+                    $('#error-nombre').html(msgErrorNombre);
+                    $('#error-apellido').html(msgErrorApellido);
+                    $('#error-telefono').html(msgErrorTelefono);
+                    $('#error-email').html(msgErrorEmail);
+                }); 
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        Nombre:
+                    </div>
+                    <div class="col">
+                        <input id="nombre" type="text" class="form-control" name="nombre"/>
+                    </div>
+                    <div class="col">
+                        <span class="rojo" id="error-nombre"></span>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col">
+                        Apellido:
+                    </div>
+                    <div class="col">
+                        <input id="apellido" type="text" class="form-control" name="apellido"/>
+                    </div>
+                    <div class="col">
+                        <span class="rojo" id="error-apellido"></span>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col">
+                        Teléfono:
+                    </div>
+                    <div class="col">
+                        <input id="telefono" type="text" class="form-control" name="telefono"/>
+                    </div>
+                    <div class="col">
+                        <span class="rojo" id="error-telefono"></span>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col">
+                        E-mail
+                    </div>
+                    <div class="col">
+                        <input id="email" type="text" class="form-control" name="email"/>
+                    </div>
+                    <div class="col">
+                        <span class="rojo" id="error-email"></span>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col">
+                        <div id="boton" class="btn btn-info">Registrarse</div>
+                    </div>
+                </div>
+            </form>
+        </div>        
+    </body>
+</html>

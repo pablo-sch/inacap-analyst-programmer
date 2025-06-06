@@ -1,0 +1,29 @@
+[pablo@pablo ~]$ cd
+[pablo@pablo ~]$ pwd
+/home/pablo
+[pablo@pablo ~]$ ls
+Descargas   Escritorio  Música      Público
+Documentos  Imágenes    Plantillas  Vídeos
+[pablo@pablo ~]$ cd Documentos
+[pablo@pablo Documentos]$ ls a* | head -5
+ls: no se puede acceder a a*: No existe el fichero o el directorio
+[pablo@pablo Documentos]$ ls | head -5
+
+[pablo@pablo home]$ cd pablo
+[pablo@pablo ~]$
+
+[pablo@pablo ~]$ cd /home
+[pablo@pablo home]$
+
+[pablo@pablo ~]$ cd Documentos
+[pablo@pablo Documentos]$ 
+
+[pablo@pablo ~]$ cd /home/pablo/Escritorio/
+
+[pablo@pablo Evaluacion]$ ls -la (mirar permisos de usuarios en cada archivo/directorio)
+
+[pablo@pablo Evaluacion]$ rm Doc1.txt  Doc2.txt (eliminar archivos)
+ 
+
+
+

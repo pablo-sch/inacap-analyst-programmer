@@ -1,0 +1,176 @@
+3
+[root@localhost pablo]#  mkdir /evaluacion
+[root@localhost pablo]#  cd /evaluacion
+[pablo@pablo evaluacion]#  cat /etc/system-release > /evaluacion/version.txt
+[pablo@pablo evaluacion]# cat uname -s -r > /evaluacion/kernel.txt
+
+
+4
+[pablo@pablo evaluacion]# cat > modulos.txt
+
+5
+[pablo@pablo evaluacion]# cat dmidecode -t bios -q > /evaluacion/bios.txt
+
+7
+[root@localhost pablo]# fdisk /dev/sdc
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 2
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 5
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 7
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+exit
+
+[root@localhost pablo]# fdisk /dev/sdd
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 2
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 4
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+exit
+
+[root@localhost pablo]# fdisk /dev/sde
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 2
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 5
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 6
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+
+Orden (m para obtener ayuda): n
+Número de partición (1-4, default 1): 7
+Primer sector (2048-8388607, valor predeterminado 2048): enter
+Last sector, +sectors or +size{K,M,G} (2048-8388607, valor predeterminado 8388607): +100M    
+Orden (m para obtener ayuda): w
+exit
+
+[root@localhost pablo]# mkfs.ext2 /dev/sdc2
+
+[root@localhost pablo]# mkfs.ext3 /dev/sdc5
+
+[root@localhost pablo]# mkfs.ext4 /dev/sdc7
+
+[root@localhost pablo]# mkfs.ext3 /dev/sdd2
+
+[root@localhost pablo]# mkfs.ext2 /dev/sdd4
+
+[root@localhost pablo]# mkfs.ext4 /dev/sde2
+
+[root@localhost pablo]# mkfs.ext2 /dev/sde5
+
+[root@localhost pablo]# mkfs.ext3 /dev/sde6
+
+[root@localhost pablo]# mkfs.ext4 /dev/sde7
+
+
+8 
+[root@localhost pablo]# mkdir /Bravo
+[root@localhost pablo]# mount /dev/sdc2 / Bravo/
+
+[root@localhost pablo]# mkdir /Isla
+[root@localhost pablo]# mount /dev/sdc5 / Isla/
+
+[root@localhost pablo]# mkdir /Medel
+[root@localhost pablo]# mount /dev/sdc7 / Medel/
+
+[root@localhost pablo]# mkdir /Jara
+[root@localhost pablo]# mount /dev/sdd2 / Jara/
+
+[root@localhost pablo]# mkdir /Sanchez
+[root@localhost pablo]# mount /dev/sdd4 / Sanchez/
+
+[root@localhost pablo]# mkdir /Diaz
+[root@localhost pablo]# mount /dev/sde2 / Diaz/
+
+[root@localhost pablo]# mkdir /Vidal
+[root@localhost pablo]# mount /dev/sde5 / Vidal/
+
+[root@localhost pablo]# mkdir /Aranguiz
+[root@localhost pablo]# mount /dev/sde6 / Aranguiz/
+
+[root@localhost pablo]# mkdir /Paredes
+[root@localhost pablo]# mount /dev/sde7 / Paredes/
+
+
+9
+[root@localhost pablo]# blkid
+
+
+10
+[root@localhost pablo]# nano /etc/fstab 
+----------------------------------------------------------------------------------------------------
+#
+# /etc/fstab
+# Created by anaconda on Wed Sep 25 13:12:21 2019
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/centos-root /                       xfs     defaults        0 0
+UUID=d0347402-92a3-4d39-b640-7517e2aea68c /boot                   xfs     defaults        0 0
+/dev/mapper/centos-home /home                   xfs     defaults        0 0
+/dev/mapper/centos-swap swap                    swap    defaults        0 0
+----------------------------------------------------------------------------------------------------
+/dev/sdc2 /Bravo  ext2	defauls 0 0
+/dev/sdc5 /Isla  ext3	defauls 0 0
+/dev/sdc7 /Medel  ext4	defauls 0 0
+/dev/sdd2 /Jara  ext4	defauls 0 0
+/dev/sdd4 /Sanchez  ext2	defauls 0 0
+/dev/sde2 /Diaz  ext4	defauls 0 0
+/dev/sde5 /Vidal  ext2	defauls 0 0
+/dev/sde6 /Aranguiz  ext3	defauls 0 0
+/dev/sde7 /Paredes  ext4	defauls 0 0
+----------------------------------------------------------------------------------------------------
+
+
+
+11
+[root@localhost pablo]# fdisk -l > /evaluacion/discoduro.txt
+
+
+12
+[root@localhost pablo]# unmount /dev/sde7 -l
+[root@localhost pablo]# fsck -y /dev/sdb
+
+13
+[root@localhost pablo]# fdisk /dev/sdd
+Orden (m para obtener ayuda): d
+Orden (m para obtener ayuda): w
+[root@localhost pablo]# fdisk -l /dev/sdd  > /evaluacion/tablaparticion.txt
+
+
+15
+[root@localhost pablo]#useradd usuario1 -c USUARIO_PRUEBA -e 20191230 -d /home/Us1 -u 1500
+
+[root@localhost pablo]#  mkdir /home/casita
+[root@localhost pablo]#useradd usuario2 -c Usuario2  -d /home/casita/Usuario2 -f -0
+
+[root@localhost pablo]#useradd -c UsuarioNew usuario3 -d /shell/sbin/nologin -f -0

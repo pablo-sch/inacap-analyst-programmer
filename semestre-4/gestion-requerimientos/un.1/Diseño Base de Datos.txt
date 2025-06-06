@@ -1,0 +1,21 @@
+Proceso: etapas del proyecto, tipos de procedimientos ,ej:cascada, scrum. en cada empresa es distinta.
+Metodos: mecanismos para desarrollar cada etapa del desarrollo/proceso,
+ej: informes ,puntos de control ,testings ,reuniones 
+Herramientas: ofimatica, aplicaiones, comunicacion, para desarrollar el software
+
+
+power Designer
+	-diseño conceptual
+		entidad, atributos (nombre, apellido, fecha, id, etc),atributo clave, cardinalidad,entidad-relacion
+	-diseño logico
+		primare key ->atributo clave
+		foreign key 
+		entidad -> tabla
+		atributo -> campo
+	-diseño fisico
+		tipos y longitud de datos (String, int, date, etc, autoincrementables, not null, requerido, no requerido)
+
+datawarehouse: servidor dedicado solamente a resguardar datos historicos.
+los datos historicos sirven para llevar un registro o seguimiento de
+las conexiones y otros datos variados registrados en el server para sacar 
+un recuento de como va la empresa y que acciones gestionar hacia futuro.

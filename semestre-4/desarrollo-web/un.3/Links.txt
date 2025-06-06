@@ -1,0 +1,69 @@
+Páginas web dinámicas con PHP
+
+
+
+Tema: Configuración de entorno de trabajo para PHP
+
+
+
+ 
+
+Río, Á. (2012). Manual PHP 6.0 : formación para el empleo. Madrid : Editorial CEP. Recuperado el 27 de junio del 2018 desde: https://ezproxy.dnb-inacap.cl/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat02965a&AN=utc.EBC3214043&lang=es&site=eds-live&scope=site
+
+Módulo 1.Tema 1: Instalación del entorno de trabajo (pp. 17-38).
+
+
+
+Tema: Elementos básicos del lenguaje PHP
+
+
+
+
+
+Vaswani, V. (2010). Fundamentos de PHP. [recurso electronico]. México : McGraw-Hill Interamericana.  Recuperado el 27 de junio del 2018 desde: https://ezproxy.dnb-inacap.cl/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat02965a&AN=utc.EBC3191866&lang=es&site=eds-live&scope=site
+
+Parte I: Entender las bases de PHP (pp. 50-64)
+
+
+
+
+
+Holzner, S. (2009). PHP. [recurso electronico] : manual de referencia. México : McGraw-Hill Interamericana. ecuperado el 27 de junio del 2018 desde:  https://ezproxy.dnb-inacap.cl/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat02965a&AN=utc.EBC3191845&lang=es&site=eds-live&scope=site
+
+Capítulo 2: Operadores y control de flujo (pp. 41-76)
+
+
+
+Río, Á. (2012). Manual PHP 6.0 : formación para el empleo. Madrid : Editorial CEP. Recuperado el 27 de junio del 2018 desde: https://ezproxy.dnb-inacap.cl/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat02965a&AN=utc.EBC3214043&lang=es&site=eds-live&scope=site
+
+Módulo 5. Tema 1: La aritmética y sus operadores en PHP (pp. 109-127).
+
+
+
+
+
+Tema: Métodos de envio de datos
+
+
+
+López, M. (2014). Desarrollo web en entorno servidor. Madrid : RA-MA Editorial. Recuperado el 27 de junio del 2018 desde: https://ezproxy.dnb-inacap.cl/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat02965a&AN=utc.EBC3229695&lang=es&site=eds-live&scope=site
+
+Capítulo 3: Programación basada en lenguajes de marcas con código embebido (pp. 84-88).
+
+
+
+Tema: Conexión e interacción con bases de datos MySQL
+
+
+
+
+
+Cobo, Á., Gómez, P., Pérez, D., & Rocha, R. (2005). PHP y MySQL. [recurso electronico] tecnologías para el desarrollo de aplicaciones web. Madrid : Ediciones Díaz de Santos. ecuperado el 27 de junio del 2018 desde: https://ezproxy.dnb-inacap.cl/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat02965a&AN=utc.EBC3173408&lang=es&site=eds-live&scope=site
+
+Capítulo 16: Conectividad a bases de datos MySQL desde PHP (pp. 413-451).
+
+
+
+López, M. (2014). Desarrollo web en entorno servidor. Madrid : RA-MA Editorial. Recuperado el 27 de junio del 2018 desde: https://ezproxy.dnb-inacap.cl/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=cat02965a&AN=utc.EBC3229695&lang=es&site=eds-live&scope=site
+
+Capítulo 6: Utilización de técnicas de acceso a datos (pp. 157-176).
