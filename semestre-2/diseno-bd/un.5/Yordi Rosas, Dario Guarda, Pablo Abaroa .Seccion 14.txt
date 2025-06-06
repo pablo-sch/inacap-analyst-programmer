@@ -1,0 +1,145 @@
+create database panaderia;
+
+use panaderia;
+----------------------------------------------------------------------------------------------------------------------------------------
+Item I:
+
+create table empleado (idempleado int primary key auto_increment,rut int, nombre varchar (40), apellido varchar (40),edad int);
+
+create table cliente (idcliente int primary key auto_increment,rut int, nombre varchar (40));
+
+create table tipo_pan (idpan int primary key auto_increment, nombre varchar (40), precio varchar);
+
+create table boleta (idboleta int primary key auto_increment, idcli int , idpanes int ,idemple int,cantidad int, fecha date);
+----------------------------------------------------------------------------------------------------------------------------------------
+Item II:
+
+alter table boleta add foreign key (idcli) references cliente (idcliente);
+
+alter table boleta add foreign key (idpanes) references tipo_pan (idpan);
+
+alter table boleta add foreign key (idemple) references empleado  (idempleado);
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Insertar Datos:
+
+insert into empleado (rut,nombre,apellido,edad) values ('20.000.000-6','Andy','Orellana','45');
+
+insert into empleado (rut,nombre,apellido,edad) values ('19.555.555-5','Rodrigo','Perez','23');
+
+insert into empleado (rut,nombre,apellido,edad) values ('19.666.666-5','Rodrigo','Segovia','18');
+
+insert into empleado (rut,nombre,apellido,edad) values ('19.345.963-3','Maria','Rosas','18');
+
+insert into empleado (rut,nombre,apellido,edad) values ('20.523.454-6','Maria','Rosas','18');
+
+
+insert into tipo_pan (nombre,precio) values ('hallulla',"100");
+
+insert into tipo_pan (nombre,precio) values ('Colizas'."125");
+
+insert into tipo_pan (nombre,precio) values ('Frances',"200");
+
+insert into tipo_pan (nombre,precio) values ('Pan_con_Chicharron',"100");
+
+
+insert into cliente (nombre,rut) values ('Dario',202657839);
+
+insert into cliente (nombre,rut) values ('Yordi',203147613);
+
+insert into cliente (nombre,rut) values ('Pablo',202647831);
+
+insert into cliente (nombre,rut) values ('Pablo',202647835);
+
+
+
+insert into boleta (idcli, idpanes, idemple,fecha, cantidad) values (1,1,1, 2018/04/09,4);
+
+insert into boleta (idcli, idpanes, idemple,fecha, ,cantidad) values (2,2,2, 2018/24/10,5);
+
+insert into boleta (idcli, idpanes, idemple,fecha, ,cantidad) values (2,3,3, 2018/04/12,4);
+
+insert into boleta (idcli, idpanes, idemple,fecha, ,cantidad) values (4,4,4, 2019/12/01,9);
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Item III:
+
+rename table tipo_pan to panes;
+
+alter table cliente modify rut varhcar (64);
+
+alter table cliente drop column rut;
+
+alter table panes change precio precio int;
+
+alter table cliente modify nombre varchar (64);
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Item IV:
+
+update empleado set apellido = "Gallardo" where nombre = "Rodrigo";
+
+update cliente set nombre = "Juan" where idcliente = 3;
+
+update panes set precio = precio+50 where precio<150;
+
+update empleados set edad = edad+2 where edad<=18;
+
+update boleta set cantidad = cantidad+2 where cantidad<5;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Item V:
+
+delete from boleta where nombre = "Yordi";
+
+delete from boleta where nombre = "Maria" and apellido = "Rosas";
+
+delete from boleta where nombre = "Pan_con_Chicharron";
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Item VI:
+
+select sum(precio) from panes;
+
+select max(cantidad) from boleta;
+
+select min(cantidad) from boleta;
+
+select avg(precio) from panes;
+
+select count nombre) from boleta;
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Item VII:
+
+select nombre from empleados where edad = 18;
+
+select nombre from panes group by nombre;
+
+select nombre from empleado group by nombre;
+
+select nombre from pan where precio = 175;
+
+select nombre from cliente group by nombre;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

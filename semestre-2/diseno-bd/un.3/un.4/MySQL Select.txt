@@ -1,0 +1,296 @@
+MariaDB [inacap]> select pasaje.codpasaje, cliente.nombre,chofer.nombre,asiento,total from ((pasaje
+   inner join cliente on cliente.idcli = pasaje.idcliente)
+   inner join chofer on chofer.idchof = pasaje.idchofer);
+-----------+--------+--------+---------+-------+
+ codpasaje | nombre | nombre | asiento | total |
+-----------+--------+--------+---------+-------+
+ AF4728    | karen  | pablo  |      20 | 17000 |
+ BT1414    | diego  | mario  |      14 | 11000 |
+ CK6132    | miguel | mario  |       9 | 14000 |
+ GQ4777    | karen  | sergio |       4 | 16500 |
+ LM2956    | diego  | sergio |      17 | 12750 |
+ MM7798    | miguel | mario  |      15 |  7000 |
+-----------+--------+--------+---------+-------+
+ rows in set (0.00 sec)
+
+MariaDB [inacap]> inner join chofer on chofer.idchof = pasaje.idchofer);
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Promedio mas bajo"
+
+MariaDB [colegio]> select a.nombre, a.apellido,((nota1 + nota2) / 2) as promedio
+    from alu_asig_prof aap
+    inner join alumno as a on a.id = aap.idalumno
+    having promedio = (select min((nota1 + nota2)/ 2) from alu_asig_prof);
++--------+----------+----------+
+| nombre | apellido | promedio |
++--------+----------+----------+
+| Marco  | González |     2.85 |
++--------+----------+----------+
+1 row in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"¿?"
+
+MariaDB [colegio]> select (nota1 + nota2) as promedio from alu_asig_prof;
++-------------------+
+| promedio          |
++-------------------+
+|              10.3 |
+|               9.3 |
+|               8.2 |
+| 9.100000000000001 |
+|              12.8 |	
+|               9.4 |
+|               8.2 |
+|              13.8 |
+|                 8 |
+|               8.2 |
+|               5.7 |
+|               8.1 |
++-------------------+
+12 rows in set (0.08 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Mostrar Nombre del Profesor y cantidad de clases que hace"
+
+MariaDB [colegio]> select p.nombre, p.apellido,asi.nombre, count(codigo_asignatura)
+    from alu_asig_prof aap
+    inner join profesor as p on p.id = aap.idprofesor
+    inner join asignatura as asi on asi.cod_asig = aap.codigo_asignatura
+    group by idprofesor;
++---------+----------+-------------+--------------------------+
+| nombre  | apellido | nombre      | count(codigo_asignatura) |
++---------+----------+-------------+--------------------------+
+| Pedro   | Pérez    | Matemáticas |                        4 |
+| Daniela | Jiménez  | Historia    |                        3 |
+| Víctor  | Silva    | Matemáticas |                        2 |
+| Andrea  | Soto     | Inglés      |                        3 |
++---------+----------+-------------+--------------------------+
+4 rows in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Todos los Alumnos que poseen Ingles con sus notas"
+
+MariaDB [colegio]> select a.nombre,p.nombre,asi.nombre,nota1,nota2
+    from alu_asig_prof aap
+    inner join alumno as a on a.id=aap.idalumno
+    inner join profesor as p on p.id=aap.idprofesor
+    inner join asignatura as asi on asi.cod_asig=aap.codigo_asignatura
+    where asi.nombre like "ingles";
++---------+--------+--------+-------+-------+
+| nombre  | nombre | nombre | nota1 | nota2 |
++---------+--------+--------+-------+-------+
+| Claudio | Andrea | Inglés |   6.2 |   6.6 |
+| Marco   | Víctor | Inglés |   3.2 |     5 |
+| Daniel  | Andrea | Inglés |   2.1 |   6.1 |
+| Jaime   | Pedro  | Inglés |   3.9 |   4.2 |
++---------+--------+--------+-------+-------+
+4 rows in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Todas las aignaturas que posee el alumno Daniel con sus respectivos profesores"
+
+MariaDB [colegio]> select a.nombre,p.nombre,
+    asi.nombre, nota1,nota2
+    from alu_asig_prof aap
+    inner join alumno as a on a.id =
+    aap.idalumno
+    inner join profesor as p on p.id =
+    aap.idprofesor
+    inner join asignatura as asi on
+    asi.cod_asig = aap.codigo_asignatura
+    where a.nombre like "daniel";
++--------+--------+-------------+-------+-------+
+| nombre | nombre | nombre      | nota1 | nota2 |
++--------+--------+-------------+-------+-------+
+| Daniel | Pedro  | Matemáticas |   5.5 |   4.8 |
+| Daniel | Andrea | Inglés      |   2.1 |   6.1 |
++--------+--------+-------------+-------+-------+
+2 rows in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Cantidad de asignaturas de Ingles"
+
+MariaDB [colegio]> select asignatura.nombre, count(codigo_asignatura) from alu_asig_prof
+    inner join asignatura on asignatura.cod_asig = alu_asig_prof.codigo_asignatura
+    where asignatura.nombre like "ingles";
++--------+--------------------------+
+| nombre | count(codigo_asignatura) |
++--------+--------------------------+
+| Inglés |                        4 | 
++--------+--------------------------+
+1 row in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Promedio de cada alumno"
+
+
+MariaDB [colegio]> select alumno.nombre, ((nota1 + nota2)/2) as promedio from alu_asig_prof
+    inner join alumno as alumno on alumno.id = alu_asig_prof.idalumno;
++---------+-------------------+
+| nombre  | promedio          |
++---------+-------------------+
+| Daniel  |              5.15 |
+| Daniel  |               4.1 |
+| Marco   |              4.65 |
+| Marco   |               4.1 |
+| Marco   |              2.85 |
+| Andrea  |               4.1 |
+| Andrea  |                 4 |
+| Jaime   | 4.550000000000001 |
+| Jaime   |               4.7 |
+| Jaime   |              4.05 |
+| Claudio |               6.4 |
+| Claudio |               6.9 |
++---------+-------------------+
+12 rows in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Promedio de cada alumno con nombre profesor y asignatura"
+
+
+MariaDB [colegio]> select alumno.nombre,profesor.nombre,asignatura.nombre, ((nota1 + nota2)/2) as promedio from alu_asig_prof
+    inner join alumno on alumno.id = alu_asig_prof.idalumno
+    inner join profesor on profesor.id = alu_asig_prof.idprofesor
+    inner join asignatura on asignatura.cod_asig = alu_asig_prof.codigo_asignatura;
++---------+---------+-------------+-------------------+
+| nombre  | nombre  | nombre      | promedio          |
++---------+---------+-------------+-------------------+
+| Daniel  | Pedro   | Matemáticas |              5.15 |
+| Marco   | Pedro   | Matemáticas |              4.65 |
+| Andrea  | Daniela | Historia    |               4.1 |
+| Jaime   | Víctor  | Matemáticas | 4.550000000000001 |
+| Claudio | Andrea  | Inglés      |               6.4 |
+| Jaime   | Daniela | Historia    |               4.7 |
+| Marco   | Víctor  | Inglés      |               4.1 |
+| Claudio | Pedro   | Matemáticas |               6.9 |
+| Andrea  | Daniela | Historia    |                 4 |
+| Daniel  | Andrea  | Inglés      |               4.1 |
+| Marco   | Andrea  | Historia    |              2.85 |
+| Jaime   | Pedro   | Inglés      |              4.05 |
++---------+---------+-------------+-------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Nota Menor de la nota1 de matematicas"
+
+
+MariaDB [colegio]> select alumno.nombre, asignatura.nombre, min(nota1) from alu_asig_prof
+    inner join alumno on alumno.id = alu_asig_prof.idalumno
+    inner join asignatura on asignatura.cod_asig = alu_asig_prof.codigo_asignatura
+    where asignatura.nombre like "matemáticas";
++--------+-------------+------------+
+| nombre | nombre      | min(nota1) |
++--------+-------------+------------+
+| Daniel | Matemáticas |        2.8 |
++--------+-------------+------------+
+1 row in set (0.06 sec)
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Lo Mismo pero con nombres en las columnas"
+
+
+MariaDB [colegio]> select alumno.nombre as Nombre_Alumno, asignatura.nombre as Nombre_Asignatura, min(nota1) as Peor_Nota from alu_asig_prof
+    inner join alumno on alumno.id = alu_asig_prof.idalumno
+    inner join asignatura on asignatura.cod_asig = alu_asig_prof.codigo_asignatura
+    where asignatura.nombre like "matemáticas";
++---------------+-------------------+-----------+
+| Nombre_Alumno | Nombre_Asignatura | Peor_Nota |
++---------------+-------------------+-----------+
+| Daniel        | Matemáticas       |       2.8 |
++---------------+-------------------+-----------+
+1 row in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Promedio de notas de la asignatura de ingles"
+
+MariaDB [colegio]> select asignatura.nombre, avg(nota1) from alu_asig_prof
+    inner join asignatura on asignatura.cod_asig = alu_asig_prof.codigo_asignatura
+    where asignatura.nombre like "Ingles";
++--------+------------+
+| nombre | avg(nota1) |
++--------+------------+
+| Inglés |       3.85 |
++--------+------------+
+1 row in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Alumnos que tienen clases con la profesora Andrea"
+
+MariaDB [colegio]> select profesor.nombre, alumno.nombre from alu_asig_prof
+    inner join alumno on alumno.id = alu_asig_prof.idalumno
+    inner join profesor on profesor.id = alu_asig_prof.idprofesor
+    where profesor.nombre like "Andrea";
++--------+---------+
+| nombre | nombre  |
++--------+---------+
+| Andrea | Claudio |
+| Andrea | Daniel  |
+| Andrea | Marco   |
++--------+---------+
+3 rows in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Cantidad de notas 1 menor a 4"
+MariaDB [colegio]> select count(nota1) from alu_asig_prof
+    where nota1 < 4;
++--------------+
+| count(nota1) |
++--------------+
+|            7 |
++--------------+
+1 row in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Nombre alumno y asignatura, donde el promedio de notas esté entre 5 y 6,5"
+
+MariaDB [colegio]> select alumno.nombre, asignatura.nombre, ((nota1+nota2)/2) as promedio from alu_asig_prof
+    inner join alumno on alumno.id = alu_asig_prof.idalumno
+    inner join asignatura on asignatura.cod_asig = alu_asig_prof.codigo_asignatura
+    where ((nota1+nota2)/2) >= 4.9 and ((nota1+nota2)/2) <= 6.6;
++---------+-------------+----------+
+| nombre  | nombre      | promedio |
++---------+-------------+----------+
+| Daniel  | Matemáticas |     5.15 |
+| Claudio | Inglés      |      6.4 |
++---------+-------------+----------+
+2 rows in set (0.00 sec)
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+"Mostrar las asignaturas que realiza cada profesor"
+
+MariaDB [colegio]> select profesor.nombre, asignatura.nombre from alu_asig_prof
+    inner join profesor on profesor.id = alu_asig_prof.idprofesor
+    inner join asignatura on asignatura.cod_asig = alu_asig_prof.codigo_asignatura
+    order by idprofesor desc;
++---------+-------------+
+| nombre  | nombre      |
++---------+-------------+
+| Andrea  | Inglés      |
+| Andrea  | Inglés      |
+| Andrea  | Historia    |
+| Víctor  | Matemáticas |
+| Víctor  | Inglés      |
+| Daniela | Historia    |
+| Daniela | Historia    |
+| Daniela | Historia    |
+| Pedro   | Matemáticas |
+| Pedro   | Matemáticas |
+| Pedro   | Matemáticas |
+| Pedro   | Inglés      |
++---------+-------------+
+12 rows in set (0.00 sec)
+

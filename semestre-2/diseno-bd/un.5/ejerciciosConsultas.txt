@@ -1,0 +1,10 @@
+1. Obtener la nota 1 mínima y nombre del alumno de la asignatura 'Matemáticas'.
+2. Sacar el promedio de notas1 de inglés.
+3. Cuántas asignaturas tiene Daniel?
+4. A cuántos alumnos les hace clases la profesora Andrea?
+5. Cuántas notas 1 rojas hay en total?
+6. Qué ramo tiene la peor nota1?
+7. Mostrar nombre alumno y las asignaturas que realiza 'Claudio'.
+8. Qué ramo tiene la mejor nota1? Mostrar nombre alumno también.
+9. Mostrar nombre alumno y asignatura, donde el promedio de notas esté entre 5 y 6,5.
+10. Mostrar las asignaturas que realiza cada profesor.

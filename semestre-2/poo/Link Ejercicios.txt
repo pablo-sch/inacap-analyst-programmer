@@ -1,0 +1,5 @@
+1. Seudocódigos: https://www.discoduroderoer.es/ejercicios-propuestos-y-resueltos-arreglos-o-arrays-en-pseudocodigo/
+
+2. Ejercicios en JAVA: https://www.discoduroderoer.es/ejercicios-propuestos-y-resueltos-arrays-de-java/
+
+3. Matrices en JAVA: https://www.discoduroderoer.es/ejercicios-propuestos-y-resueltos-matrices-de-java/
