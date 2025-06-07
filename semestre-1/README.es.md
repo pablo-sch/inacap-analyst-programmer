@@ -2,7 +2,7 @@
 
 🔄 🇺🇸 [Inglés](README.md)
 
-🔙 Vuelta al Índice [Índice Principal](../README.es.md)
+🔙 Vuelta al [Índice Principal](../README.es.md)
 
 Durante el primer semestre se cursaron materias de base teórica sin proyectos técnicos. Estas fueron:
 

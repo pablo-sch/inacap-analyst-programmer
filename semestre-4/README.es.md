@@ -2,7 +2,7 @@
 
 🔄 🇺🇸 [Inglés](README.md)
 
-🔙 Vuelta al Índice [Índice Principal](../README.es.md)
+🔙 Vuelta al [Índice Principal](../README.es.md)
 
 ## Materias con contenido técnico
 
@@ -15,7 +15,7 @@
 - 📁 [Ingeniería y Gestión de Requerimientos](./gestion-requerimientos)
   - Análisis funcional, casos de uso, historias de usuario, BPMN.
 
-## Materias teóricas (sin contenido técnico en este repositorio)
+## Materias teóricas
 
 - 🧠 Competencias de Empleabilidad para el Desarrollo Profesional
 - 🧠 Inglés III

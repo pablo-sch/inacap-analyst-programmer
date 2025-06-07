@@ -2,7 +2,7 @@
 
 🔄 🇺🇸 [Inglés](README.md)
 
-🔙 Vuelta al Índice [Índice Principal](../README.es.md)
+🔙 Vuelta al [Índice Principal](../README.es.md)
 
 ## Materias con contenido técnico
 

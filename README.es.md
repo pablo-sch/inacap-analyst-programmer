@@ -1,12 +1,20 @@
-# 🎓 Inacap – Programador Analista (2018–2020)
+# 🎓 Inacap – Analista Programador (2018–2020)
 
 🔄 🇺🇸 [Inglés](README.md)
 
-Este repositorio contiene los proyectos, ejercicios y documentación desarrollados durante mi formación como **Programador Analista** en el Instituto Profesional Inacap, entre los años 2018 y 2020.
+## 📝 Nota al usuario
+
+> Los archivos incluidos en este repositorio representan el material que pude rescatar de mi etapa académica.  
+> Este repositorio refleja aproximadamente un 50 % del contenido aprendido en clases, ya que muchas de las actividades, explicaciones y prácticas se trabajaron de forma oral, práctica o en papel, y no fueron digitalizadas ni conservadas para este portafolio.  
+> Aun así, los archivos fueron seleccionados por su valor formativo y con el fin de mostrar mi proceso de aprendizaje real, destacando especialmente aquellos ejercicios más representativos.
+
+## 📚 Descripción
+
+Este repositorio contiene los proyectos, ejercicios y documentación desarrollados durante mi formación como **Analista Programador** en el Instituto Profesional Inacap, entre los años 2018 y 2020.
 
 Cada carpeta representa un semestre. Se incluyen materias con contenido técnico y se identifican también aquellas que son exclusivamente teóricas.
 
-## 📚 Índice de Semestres
+## 🔎 Índice de Semestres
 
 📘 Semestre 1 – [Materias Teóricas](./semestre-1/README.es.md)  
 📘 Semestre 2 – [Programación y Bases de Datos](./semestre-2/README.es.md)  
@@ -16,7 +24,7 @@ Cada carpeta representa un semestre. Se incluyen materias con contenido técnico
 
 ## ⭐ Proyectos Técnicos Destacados
 
-Los siguientes proyectos fueron seleccionados por su valor técnico o complejidad. Puedes encontrarlos dentro de los respectivos semestres.
+Las siguientes asignaturas fueron seleccionadas por su valor técnico o complejidad. Puedes encontrarlos dentro de los respectivos directorios.
 
 ### 💻 Programación Técnica
 
@@ -51,8 +59,7 @@ Algunos archivos técnicos requieren software específico para su visualización
 
 Siempre que es posible, se incluyen versiones en `.png` o `.pdf` para consulta rápida.
 
-## 📝 Nota sobre el contenido
+### 📝 Notas adicionales
 
-> Los archivos incluidos en este repositorio representan el material que logré rescatar de mi etapa académica.  
-> La mayoría de los documentos, proyectos o ejercicios pueden estar incompletos, desactualizados o no reflejar el 100 % de su ejecución original.  
-> Fueron seleccionados por su valor formativo y con el fin de mostrar mi proceso de aprendizaje real.
+- Durante la asignatura _Comunicación y Redes de Datos_ se utilizaron herramientas como **Cisco Packet Tracer** para realizar configuraciones de red, topologías y simulaciones.
+- Sin embargo, no se conservaron los archivos `.pkt` ni documentación correspondiente.
