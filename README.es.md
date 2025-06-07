@@ -37,3 +37,22 @@ Los siguientes proyectos fueron seleccionados por su valor técnico o complejida
 ### 🎨 Diseño Visual y UX
 
 📁 [Diseño de Interfaz – Mockups y wireframes](./semestre-3/diseno-interfaz)
+
+## 🛠️ Visualización de archivos especiales
+
+Algunos archivos técnicos requieren software específico para su visualización o edición:
+
+| Tipo de archivo    | Requiere               |
+| ------------------ | ---------------------- |
+| `.mwb`             | MySQL Workbench        |
+| `.drawio` / `.dio` | diagrams.net (Draw.io) |
+| `.bpmn`            | Bizagi Modeler         |
+| `.xd`, `.fig`      | Adobe XD, Figma        |
+
+Siempre que es posible, se incluyen versiones en `.png` o `.pdf` para consulta rápida.
+
+## 📝 Nota sobre el contenido
+
+> Los archivos incluidos en este repositorio representan el material que logré rescatar de mi etapa académica.  
+> La mayoría de los documentos, proyectos o ejercicios pueden estar incompletos, desactualizados o no reflejar el 100 % de su ejecución original.  
+> Fueron seleccionados por su valor formativo y con el fin de mostrar mi proceso de aprendizaje real.
