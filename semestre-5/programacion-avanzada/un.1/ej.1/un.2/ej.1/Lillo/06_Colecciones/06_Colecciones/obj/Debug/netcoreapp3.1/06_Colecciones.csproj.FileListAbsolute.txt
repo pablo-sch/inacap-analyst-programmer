@@ -1,0 +1,26 @@
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.exe
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.deps.json
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.runtimeconfig.json
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.runtimeconfig.dev.json
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.dll
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.pdb
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.csprojAssemblyReference.cache
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.csproj.CoreCompileInputs.cache
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.AssemblyInfoInputs.cache
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.AssemblyInfo.cs
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.dll
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.pdb
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.genruntimeconfig.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.exe
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.deps.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.runtimeconfig.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.runtimeconfig.dev.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.dll
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\bin\Debug\netcoreapp3.1\06_Colecciones.pdb
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.csprojAssemblyReference.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.csproj.CoreCompileInputs.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.AssemblyInfoInputs.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.AssemblyInfo.cs
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.dll
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.pdb
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\06_Colecciones\06_Colecciones\obj\Debug\netcoreapp3.1\06_Colecciones.genruntimeconfig.cache

@@ -1,0 +1,23 @@
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.deps.json
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.runtimeconfig.json
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.runtimeconfig.dev.json
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.dll
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.pdb
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.csprojAssemblyReference.cache
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.csproj.CoreCompileInputs.cache
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.AssemblyInfoInputs.cache
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.AssemblyInfo.cs
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.dll
+C:\Users\leand\source\repos\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.pdb
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.deps.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.runtimeconfig.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.runtimeconfig.dev.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.dll
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\bin\Debug\netcoreapp2.1\02_Operaciones.pdb
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.csprojAssemblyReference.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.csproj.CoreCompileInputs.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.AssemblyInfoInputs.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.AssemblyInfo.cs
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.dll
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.pdb
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\02_Operaciones\02_Operaciones\obj\Debug\netcoreapp2.1\02_Operaciones.genruntimeconfig.cache

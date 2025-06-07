@@ -1,0 +1,24 @@
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.exe
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.deps.json
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.runtimeconfig.json
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.runtimeconfig.dev.json
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.dll
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.pdb
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.csproj.CoreCompileInputs.cache
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.AssemblyInfoInputs.cache
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.AssemblyInfo.cs
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.dll
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.pdb
+C:\Users\leand\source\repos\inacap\Programación Avanzada de Aplicaciones\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.genruntimeconfig.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.exe
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.deps.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.runtimeconfig.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.runtimeconfig.dev.json
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.dll
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\bin\Debug\netcoreapp3.1\05_Listas.pdb
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.csproj.CoreCompileInputs.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.AssemblyInfoInputs.cache
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.AssemblyInfo.cs
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.dll
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.pdb
+E:\Inacap\5º Semestre\Programación Avanzada De Aplicaciones\Unidad Nº2\Trabajos\Lillo\05_Listas\05_Listas\obj\Debug\netcoreapp3.1\05_Listas.genruntimeconfig.cache

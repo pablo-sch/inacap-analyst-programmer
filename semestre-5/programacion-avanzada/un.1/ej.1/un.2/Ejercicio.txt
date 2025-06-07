@@ -1,0 +1,7 @@
+HACER SIMULADOR DE PROMEDIO DE NOTAS, SIN USO DE BASE DE DATOS.
+
+1. Crear Asignatura (id, nombre, numero_de_notas)
+2. Crear Alumno (id, nombre, apellido)
+3. Asociar alumnos a una asignatura
+4. Ingresar Notas
+5. Calcular el promedio de un Alumno, según su Asignatura

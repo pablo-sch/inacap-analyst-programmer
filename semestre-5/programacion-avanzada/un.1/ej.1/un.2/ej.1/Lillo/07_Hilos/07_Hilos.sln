@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_Hilos", "07_Hilos\07_Hilos.csproj", "{52A007EC-0E94-450F-8887-55DB2BA9A988}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mascota Virtual - Evaluación 2", "C:\Users\pablo\source\repos\Mascota Virtual - Evaluación 2\Mascota Virtual - Evaluación 2\Mascota Virtual - Evaluación 2.csproj", "{12F3D98A-FD79-4F16-BCC3-B712E31A7DE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52A007EC-0E94-450F-8887-55DB2BA9A988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A007EC-0E94-450F-8887-55DB2BA9A988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A007EC-0E94-450F-8887-55DB2BA9A988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A007EC-0E94-450F-8887-55DB2BA9A988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12F3D98A-FD79-4F16-BCC3-B712E31A7DE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12F3D98A-FD79-4F16-BCC3-B712E31A7DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12F3D98A-FD79-4F16-BCC3-B712E31A7DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12F3D98A-FD79-4F16-BCC3-B712E31A7DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3F43642-B3CB-44AE-A8B0-4750A112CAF9}
+	EndGlobalSection
+EndGlobal
