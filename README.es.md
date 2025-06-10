@@ -2,11 +2,13 @@
 
 🔄 🇺🇸 [Inglés](README.md)
 
-## 📝 Nota al usuario
+## 📝 Nota al Usuario
 
-> Los archivos incluidos en este repositorio representan el material que pude rescatar de mi etapa académica.  
-> Este repositorio refleja aproximadamente un 50 % del contenido aprendido en clases, ya que muchas de las actividades, explicaciones y prácticas se trabajaron de forma oral, práctica o en papel, y no fueron digitalizadas ni conservadas para este portafolio.  
-> Aun así, los archivos fueron seleccionados por su valor formativo y con el fin de mostrar mi proceso de aprendizaje real, destacando especialmente aquellos ejercicios más representativos.
+### ✏️ Nota
+
+> Este repositorio contiene archivos académicos rescatados de mi formación como Analista Programador.  
+> Representa una parte significativa del contenido aprendido entre 2018 y 2020, aunque no incluye todo el material trabajado en clases prácticas o escritas no digitalizadas.  
+> Todo el contenido está en **español** y fue seleccionado por su valor formativo y representativo del proceso de aprendizaje.
 
 ## 📚 Descripción
 
@@ -22,15 +24,17 @@ Cada carpeta representa un semestre. Se incluyen materias con contenido técnico
 📘 Semestre 4 – [Linux, Móviles y Desarrollo Web](./semestre-4/README.es.md)  
 📘 Semestre 5 – [Windows, Ingeniería y Proyecto Final](./semestre-5/README.es.md)
 
-## ⭐ Proyectos Técnicos Destacados
+## ⭐ Asignaturas Destacadas por su Aporte Técnico
 
 Las siguientes asignaturas fueron seleccionadas por su valor técnico o complejidad. Puedes encontrarlos dentro de los respectivos directorios.
 
 ### 💻 Programación Técnica
 
-📁 [Java – POO: Clases y herencia](./semestre-2/poo)  
-📁 [Android – CRUD de tareas](./semestre-4/aplicaciones-moviles)  
-📁 [JavaScript – Formulario con validación](./semestre-4/desarrollo-web)
+📁 [Programación Orientada a Objeto](./semestre-2/poo)
+📁 [Programación de Componentes Web](./semestre-3/componentes-web/)  
+📁 [Desarrollo de Aplicaciones Web](./semestre-4/desarrollo-web/)
+📁 [Aplicaciones Móviles](./semestre-4/aplicaciones-moviles)  
+📁 [Programación Avanzada De Aplicaciones](./semestre-5/programacion-avanzada/)
 
 ### 🛢️ Bases de Datos
 
@@ -40,13 +44,16 @@ Las siguientes asignaturas fueron seleccionadas por su valor técnico o compleji
 ### 📄 Documentación Técnica
 
 📁 [Ingeniería de Software – Ciclo de vida del proyecto](./semestre-5/ingenieria-software)  
-📁 [Casos de uso y requisitos funcionales](./semestre-2/analisis-diseno-oo)
+📁 [Análisis y Diseño Orientado al Objeto / Casos de uso y requisitos funcionales](./semestre-2/analisis-diseno-oo)
+📁 [Ingeniería y Gestión de Requerimientos](./semestre-4/gestion-requerimientos/)
+📁 [Sistemas de Información](./semestre-3/sistemas-informacion/)
+📁 [Ingeniería De Software](./semestre-5/ingenieria-software/)
 
 ### 🎨 Diseño Visual y UX
 
 📁 [Diseño de Interfaz – Mockups y wireframes](./semestre-3/diseno-interfaz)
 
-## 🛠️ Visualización de archivos especiales
+## 🛠️ Visualización de Archivos Especiales
 
 Algunos archivos técnicos requieren software específico para su visualización o edición:
 
@@ -59,7 +66,7 @@ Algunos archivos técnicos requieren software específico para su visualización
 
 Siempre que es posible, se incluyen versiones en `.png` o `.pdf` para consulta rápida.
 
-### 📝 Notas adicionales
+### 📝 Notas Adicionales
 
 - Durante la asignatura _Comunicación y Redes de Datos_ se utilizaron herramientas como **Cisco Packet Tracer** para realizar configuraciones de red, topologías y simulaciones.
-- Sin embargo, no se conservaron los archivos `.pkt` ni documentación correspondiente.
+  Sin embargo, no se conservaron los archivos `.pkt` ni documentación correspondiente.

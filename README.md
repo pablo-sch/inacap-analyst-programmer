@@ -2,17 +2,19 @@
 
 🔄 🇪🇸 [Spanish](README.es.md)
 
-## 📝 Note to the Reader
+## 📝 User Note
 
-> The files included in this repository represent the material I was able to recover from my academic journey.  
-> This repository reflects approximately 50% of the content I learned in class, as many activities, explanations, and practical work were done orally, hands-on, or on paper, and were not digitized or preserved for this portfolio.  
-> Nevertheless, the included files were selected for their formative value and aim to showcase my actual learning process, especially highlighting the most representative exercises.
+### ✏️ Note
+
+> This repository contains academic files recovered from my time studying as a Computer Programming Analyst.  
+> It represents a significant portion of the content learned between 2018 and 2020, although it does not include all practical or handwritten class materials that were not digitized.  
+> All content is in **Spanish**, and was selected for its educational value and to reflect the learning process.
 
 ## 📚 Description
 
-This repository contains projects, exercises, and documentation developed during my studies as an **Analyst Programmer** at Inacap Technical Institute between 2018 and 2020.
+This repository contains projects, exercises, and documentation developed during my education as a **Computer Programming Analyst** at Inacap Professional Institute between 2018 and 2020.
 
-Each folder represents one academic semester. Both technical subjects and theoretical courses are included and clearly identified.
+Each folder represents one academic semester. It includes technical subjects and also identifies those that were purely theoretical.
 
 ## 🔎 Semester Index
 
@@ -20,17 +22,19 @@ Each folder represents one academic semester. Both technical subjects and theore
 📘 Semester 2 – [Programming and Databases](./semestre-2/README.es.md)  
 📘 Semester 3 – [Design, Web, and Databases](./semestre-3/README.es.md)  
 📘 Semester 4 – [Linux, Mobile, and Web Development](./semestre-4/README.es.md)  
-📘 Semester 5 – [Windows, Software Engineering, and Final Project](./semestre-5/README.es.md)
+📘 Semester 5 – [Windows, Engineering, and Final Project](./semestre-5/README.es.md)
 
-## ⭐ Highlighted Technical Projects
+## ⭐ Featured Subjects by Technical Value
 
-The following subjects and projects were selected for their technical value or complexity. You can find them inside their respective directories.
+The following subjects were selected for their technical depth or complexity. You can find them inside the respective directories.
 
 ### 💻 Technical Programming
 
-📁 [Java – OOP: Classes and Inheritance](./semestre-2/poo)  
-📁 [Android – Task Management CRUD App](./semestre-4/aplicaciones-moviles)  
-📁 [JavaScript – Form Validation](./semestre-4/desarrollo-web)
+📁 [Object-Oriented Programming](./semestre-2/poo)  
+📁 [Web Component Programming](./semestre-3/componentes-web/)  
+📁 [Web Application Development](./semestre-4/desarrollo-web/)  
+📁 [Mobile Applications](./semestre-4/aplicaciones-moviles)  
+📁 [Advanced Application Programming](./semestre-5/programacion-avanzada/)
 
 ### 🛢️ Databases
 
@@ -40,17 +44,20 @@ The following subjects and projects were selected for their technical value or c
 ### 📄 Technical Documentation
 
 📁 [Software Engineering – Project Lifecycle](./semestre-5/ingenieria-software)  
-📁 [Use Cases and Functional Requirements](./semestre-2/analisis-diseno-oo)
+📁 [Object-Oriented Analysis and Design / Use Cases and Functional Requirements](./semestre-2/analisis-diseno-oo)  
+📁 [Requirements Engineering and Management](./semestre-4/gestion-requerimientos/)  
+📁 [Information Systems](./semestre-3/sistemas-informacion/)  
+📁 [Software Engineering](./semestre-5/ingenieria-software/)
 
 ### 🎨 Visual Design and UX
 
 📁 [Interface Design – Mockups and Wireframes](./semestre-3/diseno-interfaz)
 
-## 🛠️ Special File Types
+## 🛠️ Special File Formats
 
-Some technical files in this repository require specific software to view or edit:
+Some technical files require specific software to view or edit:
 
-| File Type          | Required Software      |
+| File Type          | Requires               |
 | ------------------ | ---------------------- |
 | `.mwb`             | MySQL Workbench        |
 | `.drawio` / `.dio` | diagrams.net (Draw.io) |
@@ -61,5 +68,5 @@ Whenever possible, `.png` or `.pdf` versions are included for quick reference.
 
 ### 📝 Additional Notes
 
-- During the _Data Communication and Networking_ course, we used **Cisco Packet Tracer** to configure networks, build topologies, and run simulations.
-- However, `.pkt` files and related documentation were not preserved.
+- During the course _Data Communication and Networking_, tools like **Cisco Packet Tracer** were used to build network configurations, topologies, and simulations.  
+  However, the `.pkt` files and related documentation were not preserved.
